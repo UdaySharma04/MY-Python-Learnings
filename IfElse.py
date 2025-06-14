@@ -82,3 +82,15 @@
 
 
 
+
+import time
+# Get current hour (in 24-hour format)
+current_hour = time.localtime().tm_hour
+
+# Greet based on the time of day
+if current_hour < 12:
+    print("Good morning!")
+elif current_hour < 18:
+    print("Good afternoon!")
+else:
+    print("Good evening!")

@@ -120,3 +120,59 @@
 #     print('Good Night',name, '!' )
 
 
+
+
+#Q10.) Define a circle class to create a circle with radius r using the constructer.
+# Define an Area() method of the class which calculates the area of the circle.
+# Define a perimeter() method of the class which allows you to calculate the perimeter of the circle.
+
+
+# ANS10.)
+# class Circle:
+#     def __init__(self, radius):
+#         self.radius = radius
+
+#     def area(self):
+#         return (22/7) * self.radius * self.radius
+
+#     def perimeter(self):
+#         return 2 * (22/7) * self.radius
+
+# circle1 = Circle(10)
+# print('The area of the circle is:', circle1.area())
+# print('The perimeter of the circle is:', circle1.perimeter())
+    
+
+
+
+
+
+#Q11.) Write a Library class with no_of_books and books as two instance variables. Write a program to create a library from this Library class and show how you can print all books, add a book and get the number of books using different methods. Show that your program doesnt persist the books after the program is stopped . 
+
+
+# ANS11.)
+class Library:
+    def __init__(self):
+        self.books = []
+        self.no_of_books = 0
+
+    def add_book(self, book):
+        self.books.append(book)
+        self.no_of_books += 1
+
+    def print_books(self):
+        print("Books in library:")
+        for book in self.books:
+            print("-", book)
+
+    def get_no_of_books(self):
+        return self.no_of_books
+
+# Program starts here
+lib = Library()
+
+lib.add_book("Harry Potter")
+lib.add_book("The Alchemist")
+
+lib.print_books()
+print("Number of books:", lib.get_no_of_books())
